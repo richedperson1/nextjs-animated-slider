@@ -20,10 +20,13 @@ function Header() {
             <motion.li
               layout
               key={index}
-              className={` ${
-                active == index && " border-b-2 border-b-yellow-500"
-              } inline-block cursor-pointer  border-b-yellow-500 transition duration-300 ease-in-out hover:border-b-2 hover:text-white`}
+              onClick={() => {
+                setActive(index)
+              }}
+              className={` ${active == index && " border-b-2 border-b-yellow-500"
+                } inline-block cursor-pointer  border-b-yellow-500 transition duration-300 ease-in-out hover:border-b-2 hover:text-white`}
             >
+
               {menu}
             </motion.li>
           );
@@ -41,9 +44,10 @@ export default Header;
 
 const menus = [
   "Home",
-  "Holdidays",
+  "Holidays",
   "Destinations",
   "Flights",
   "Offers",
   "Contacts",
+  "Travel-list"
 ];
