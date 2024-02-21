@@ -5,6 +5,8 @@ import Head from "next/head";
 
 function Header() {
   const [active, setActive] = React.useState(0);
+  /* This code block is mapping over the `menus` array and generating a list of `<motion.li>` elements
+  based on the items in the array. */
   return (
     <div className=" absolute mt-5 flex w-full flex-wrap items-center justify-between gap-2 px-5 text-xs font-medium uppercase opacity-90 md:px-10">
       <Head>
@@ -15,6 +17,8 @@ function Header() {
         Trust me
       </div>
       <ul className=" flex flex-wrap items-center gap-3 text-[11px] md:gap-10">
+
+
         {menus.map((menu, index) => {
           return (
             <motion.li
