@@ -25,7 +25,7 @@ export type CurrentSlideData = {
 
 export default function Home() {
   const [data, setData] = React.useState<Data[]>(sliderData.slice(1));
-  const [transitionData, setTransitionData] = React.useState<Data>(
+  const [transitionData, setTransitionData] = React.useState(
     sliderData[0]
   );
   const [currentSlideData, setCurrentSlideData] =
